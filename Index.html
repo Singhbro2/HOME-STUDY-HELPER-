@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Study Helper | বাংলা মাধ্যম</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>হোম স্টাডি হেল্পার</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">হোম</a></li>
+                <li><a href="classes/class1.html">ক্লাসসমূহ</a></li>
+                <li><a href="#notes">নোটস</a></li>
+                <li><a href="#contact">যোগাযোগ</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="খুঁজুন...">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>বিনামূল্যে বাংলা মাধ্যমের শিক্ষা</h2>
+            <p>ক্লাস ১ থেকে ১২ পর্যন্ত সমস্ত নোটস ও ভিডিও</p>
+            <div class="buttons">
+                <a href="#classes" class="btn">ক্লাস নির্বাচন করুন</a>
+                <a href="#videos" class="btn secondary">ভিডিও দেখুন</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Class Grid -->
+    <section id="classes" class="class-grid">
+        <h2>আপনার ক্লাস নির্বাচন করুন</h2>
+        <div class="grid-container">
+            <!-- Classes 1-12 -->
+            <% for (let i = 1; i <= 12; i++) { %>
+                <a href="classes/class<%= i %>.html" class="class-box">
+                    ক্লাস <%= i %>
+                </a>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 হোম স্টাডি হেল্পার | সকল অধিকার সংরক্ষিত</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+            </html>
